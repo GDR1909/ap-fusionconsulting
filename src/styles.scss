@@ -1,12 +1,19 @@
+@use "./fonts.scss" as *;
+
 /* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #FEF2DC;
+  color: #fef2dc;
 }
 
 html {
   font-size: 100%; /* Ensures that 1rem = 16px */
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+  font-family: "Roboto"; /* My preferred default font */
+  line-height: 1.5; /* Better readability */
 }
