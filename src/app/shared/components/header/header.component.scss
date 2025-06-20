@@ -3,6 +3,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 img {
@@ -18,7 +24,7 @@ img {
   transition: ease-in-out 250ms;
 
   &:hover {
-    background-color: #FF6963;
+    background-color: #ff6963;
     transition: ease-in-out 250ms;
   }
 }
