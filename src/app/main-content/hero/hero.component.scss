@@ -4,6 +4,39 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 1355px;
+  background-image: url('/assets/img/photo.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100px;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(56, 62, 66, 1), rgba(56, 62, 66, 0));
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(56, 62, 66, 1), rgba(56, 62, 66, 0));
+  }
 }
 
 .content {
@@ -49,5 +82,17 @@ a {
   &:hover {
     background-color: #ff6963;
     transition: ease-in-out 250ms;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .heroImage {
+    max-width: 1080px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .heroImage {
+    max-width: 715px;
   }
 }
