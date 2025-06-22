@@ -30,12 +30,12 @@ main {
 
   &::before {
     left: 0;
-    background: linear-gradient(to right, rgba(56, 62, 66, 1), rgba(56, 62, 66, 0));
+    background: linear-gradient(to right, rgba(232, 236, 241, 1), rgba(232, 236, 241, 0));
   }
 
   &::after {
     right: 0;
-    background: linear-gradient(to left, rgba(56, 62, 66, 1), rgba(56, 62, 66, 0));
+    background: linear-gradient(to left, rgba(232, 236, 241, 1), rgba(232, 236, 241, 0));
   }
 }
 
