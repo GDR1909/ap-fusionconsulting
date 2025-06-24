@@ -18,7 +18,7 @@ export class ContactFormComponent {
   contactData = {
     name: '',
     email: '',
-    message: '',
+    // message: '',
     privacyPolicy: false
   }
 
@@ -27,7 +27,7 @@ export class ContactFormComponent {
 
   /** Configuration for the HTTP POST request. */
   post = {
-    endPoint: 'https://davide-religioso.com/sendMail.php',  // 'https://deineDomain.de/sendMail.php'
+    endPoint: 'https://apdrtest.de/sendMail.php',  // 'https://deineDomain.de/sendMail.php'
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -38,13 +38,13 @@ export class ContactFormComponent {
   };
 
 
-  /**
-   * Creates an instance of ContactFormComponent.
-   *
-   * @param {PortfolioService} portfolioService - The service used to manage the portfolio.
-   * @param {TranslateService} translate - The service used for language translation.
-   */
-  constructor() { }
+  // /**
+  //  * Creates an instance of ContactFormComponent.
+  //  *
+  //  * @param {PortfolioService} portfolioService - The service used to manage the portfolio.
+  //  * @param {TranslateService} translate - The service used for language translation.
+  //  */
+  // constructor() { }
 
 
   /**
