@@ -1,1 +1,26 @@
-<p>contact-form works!</p>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Dein Name" required>
+    @if (!name.valid && name.touched) {
+        <span class="warningText">Bitte gib deinen Namen ein</span>
+    }
+
+    <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+        placeholder="Deine E-Mail-Adresse" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+    @if (!email.valid && email.touched) {
+        <span class="warningText">Bitte gib deine E-Mail-Adresse ein</span>
+    }
+
+    <div class="privacyPolicy">
+        <input #check="ngModel" [(ngModel)]="contactData.privacyPolicy" type="checkbox" name="check"
+            (change)="privacyPolicyAccepted($event)" required>
+        <span>
+            Ich habe die <a routerLink="/privacy-policy" routerLinkActive="active">Datenschutzerklärung</a> gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.
+        </span>
+    </div>
+    @if (!check.valid && check.touched) {
+    <span class="warningText">Bitte akzeptiere die Datenschutzerklärung</span>
+    }
+
+    <input class="submitButton" type="submit" value="Anmelden"
+        [disabled]="!contactForm.valid || contactForm.submitted">
+</form>
