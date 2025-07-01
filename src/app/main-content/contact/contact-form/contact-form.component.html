@@ -14,7 +14,7 @@
         <input #check="ngModel" [(ngModel)]="contactData.privacyPolicy" type="checkbox" name="check"
             (change)="privacyPolicyAccepted($event)" required>
         <span>
-            Ich habe die <a routerLink="/privacy-policy" routerLinkActive="active">Datenschutzerklärung</a> gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.
+            Ich habe die <a routerLink="/privacy-policy" routerLinkActive="active">Datenschutzerklärung</a> gelesen.
         </span>
     </div>
     @if (!check.valid && check.touched) {
