@@ -1,0 +1,63 @@
+footer {
+  background: linear-gradient(90deg, #e8ecf1, #004155, #e8ecf1);
+  position: relative;
+  padding: 1rem;
+
+  a {
+    display: flex;
+    width: fit-content;
+  }
+}
+
+img {
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+}
+
+.copyrightDiv {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    height: 24px;
+  }
+}
+
+.links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  display: flex;
+  gap: 2rem;
+
+  img {
+    opacity: 0.5;
+    transition: ease-in-out 250ms;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+      transition: ease-in-out 250ms;
+    }
+  }
+}
+
+.legalNotice {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+}
