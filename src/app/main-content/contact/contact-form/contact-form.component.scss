@@ -33,6 +33,17 @@ input {
     height: 18px;
     cursor: pointer;
   }
+
+  a {
+    text-decoration: none;
+    color: rgb(0, 65, 85);
+    transition: ease-in-out 250ms;
+
+    &:hover {
+      text-decoration: underline;
+      transition: ease-in-out 250ms;
+    }
+  }
 }
 
 .submitButton {
