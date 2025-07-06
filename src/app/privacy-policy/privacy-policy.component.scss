@@ -1,0 +1,31 @@
+#generator_results {
+  padding: 1rem;
+  position: relative;
+  padding-top: 96px;
+  padding-bottom: 24px;
+}
+
+#generator_results_content {
+  position: relative;
+}
+
+ul {
+  padding-left: 1.875rem;
+}
+
+img {
+  height: 3.125rem;
+  position: absolute;
+  right: 0;
+  border-radius: 100%;
+  margin: 0.625rem;
+  padding: 0.625rem;
+  transition: ease-in-out 250ms;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: rgba(0, 65, 85, 0.15);
+    transition: ease-in-out 250ms;
+  }
+}
