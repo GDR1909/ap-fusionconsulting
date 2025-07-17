@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ApFusionconsultingService } from '../../../services/ap-fusionconsulting.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,6 +14,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class ContactFormComponent {
   /** HTTP client for sending requests. */
   http = inject(HttpClient);
+
+  service = inject(ApFusionconsultingService);
 
   /** Data object representing the contact form. */
   contactData = {
@@ -38,15 +41,6 @@ export class ContactFormComponent {
   };
 
 
-  // /**
-  //  * Creates an instance of ContactFormComponent.
-  //  *
-  //  * @param {PortfolioService} portfolioService - The service used to manage the portfolio.
-  //  * @param {TranslateService} translate - The service used for language translation.
-  //  */
-  // constructor() { }
-
-
   /**
    * Updates the privacy policy acceptance status based on the checkbox state.
    *
@@ -68,7 +62,7 @@ export class ContactFormComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // this.portfolioService.showSentMessagePopUp(); //GANZ WICHTIG. DIESE ZEILE ABÄNDERN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            this.service.showHint();
             // optionial code can be added here
             ngForm.resetForm();
           },
@@ -80,6 +74,7 @@ export class ContactFormComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       // Perform mail test-specific actions
       ngForm.resetForm();
+      // optionial code can be added here
     }
   }
 }

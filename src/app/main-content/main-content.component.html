@@ -2,4 +2,6 @@
 
 <app-contact></app-contact>
 
-<!-- <app-hint-message-sent></app-hint-message-sent> -->
+@if (service.hintIsShown) {
+    <app-hint-message-sent @fadeIn></app-hint-message-sent>
+}
