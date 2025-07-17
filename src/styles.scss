@@ -1,4 +1,6 @@
 @use "./fonts.scss" as *;
+// @import 'aos/dist/aos.css';
+@import '../node_modules/aos/dist/aos.css';
 
 /* Global Reset */
 * {
