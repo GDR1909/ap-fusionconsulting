@@ -21,21 +21,33 @@ export class AppComponent implements OnInit {
 
   // ngOnInit() {
   //   AOS.init({
-  //     duration: 800,
+  //     duration: 1500,
   //     easing: 'ease-in-out',
   //     once: true,
   //   });
   // }
 
+  // ngOnInit() {
+  //   if (isPlatformBrowser(this.platformId)) {
+  //     import('aos').then((AOS) => {
+  //       AOS.init({
+  //         duration: 1500,
+  //         easing: 'ease-in-out',
+  //         once: true,
+  //       });
+  //     });
+  //   }
+  // }
+
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      import('aos').then((AOS) => {
+    document.onreadystatechange = function () {
+      if (document.readyState == 'complete') {
         AOS.init({
           duration: 1500,
           easing: 'ease-in-out',
           once: true,
         });
-      });
-    }
+      }
+    };
   }
 }
