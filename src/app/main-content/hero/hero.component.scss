@@ -70,7 +70,7 @@ a {
   height: 100vh;
   width: 100%;
   max-width: 1355px;
-  background-image: url('/assets/img/photo.webp');
+  background-image: url("/assets/img/photo.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,5 +110,40 @@ a {
 @media screen and (max-width: 768px) {
   .heroImage {
     max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  main {
+    background: linear-gradient(#004155c7, #e8ecf185, #e8ecf185);
+  }
+
+  .heroImage {
+    z-index: -1;
+  }
+
+  .content {
+    width: unset;
+    margin-top: 0;
+    bottom: 4rem;
+    text-align: center;
+  }
+
+  .headlines {
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .services {
+    display: none;
+  }
+
+  .btnDiv {
+    display: none;
   }
 }

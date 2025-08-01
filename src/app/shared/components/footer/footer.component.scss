@@ -1,5 +1,7 @@
 footer {
-  background: linear-gradient(90deg, #e8ecf1, #004155, #e8ecf1);
+  height: 150px;
+  // background: linear-gradient(90deg, #e8ecf1, #004155, #e8ecf1);
+  background: linear-gradient(#004155c7, #e8ecf185);
   position: relative;
   padding: 1rem;
 
@@ -73,5 +75,25 @@ img {
 @media screen and (max-width: 1024px) {
   footer {
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  footer {
+    background: linear-gradient(#004155c7, #e8ecf185);
+  }
+}
+
+@media screen and (max-width: 426px) {
+  footer {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links, .logo, .copyrightDiv, .imprint {
+    position: static;
   }
 }
