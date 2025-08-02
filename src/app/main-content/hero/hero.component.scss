@@ -107,13 +107,21 @@ a {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .heroImage {
     max-width: 500px;
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 840px) {
+  .headlines {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
   main {
     background: linear-gradient(#004155c7, #e8ecf185, #e8ecf185);
   }
@@ -125,7 +133,7 @@ a {
   .content {
     width: unset;
     margin-top: 0;
-    bottom: 4rem;
+    bottom: 8rem;
     text-align: center;
   }
 
@@ -145,5 +153,19 @@ a {
 
   .btnDiv {
     display: none;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .content {
+    bottom: 6rem;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
   }
 }
