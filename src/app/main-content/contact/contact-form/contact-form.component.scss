@@ -10,7 +10,7 @@ form {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 5rem;
+  padding: 4rem;
 }
 
 input {
@@ -19,7 +19,7 @@ input {
   border-radius: 0.5rem;
   border: solid 1px #fef2dc;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .privacyPolicy {
@@ -35,12 +35,11 @@ input {
   }
 
   a {
-    text-decoration: none;
-    color: rgb(0, 65, 85);
+    color: black;
     transition: ease-in-out 250ms;
 
     &:hover {
-      text-decoration: underline;
+      color: rgb(0, 135, 177);;
       transition: ease-in-out 250ms;
     }
   }
@@ -67,4 +66,10 @@ input {
 .warningText {
   color: red;
   margin-top: -1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  form {
+    padding: 3rem;
+  }
 }
