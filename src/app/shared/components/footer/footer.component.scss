@@ -1,6 +1,5 @@
 footer {
   height: 150px;
-  // background: linear-gradient(90deg, #e8ecf1, #004155, #e8ecf1);
   background: linear-gradient(#004155c7, #e8ecf185);
   position: relative;
   padding: 1rem;
@@ -67,6 +66,7 @@ img {
   transition: ease-in-out 250ms;
 
   &:hover {
+    color: rgb(0, 135, 177);
     text-decoration: underline;
     transition: ease-in-out 250ms;
   }
